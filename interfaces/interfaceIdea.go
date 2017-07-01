@@ -33,7 +33,7 @@ func (circle Circle) perimeter() float64 {
 	return 2 * math.Pi * circle.radius
 }
 
-func measure(obj Geometry) {
+func Print(obj Geometry) {
 	fmt.Println(obj)
 	fmt.Println(obj.area())
 	fmt.Println(obj.perimeter())
@@ -43,6 +43,6 @@ func main() {
 	r := Rectangle{length: 4, width: 3}
 	c := Circle{radius: 5}
 
-	measure(r)
-	measure(c)
+	Print(r)
+	Print(c)
 }
