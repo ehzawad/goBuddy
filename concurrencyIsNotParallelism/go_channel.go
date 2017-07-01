@@ -19,7 +19,7 @@ func longTask(channel chan int) {
 func main() {
 	rand.Seed(time.Now().Unix())
 	myChannel := make(chan int) // Add
-	// go coroutine
+	// passed myChnannel to go coroutine -> longTask
 	go longTask(myChannel)
 	fmt.Println("Took", <-myChannel, "Second")
 }
